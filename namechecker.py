@@ -53,9 +53,6 @@ if text in r.text:
     print a + ".com is available. Yay!"
 elif r.status_code==200:
     print a + ".com is taken. Sorry."
-    tree = html.fromstring(r.content)
-    info = tree.xpath('//div[@class="col-md-8 queryResponseBodyValue"]/text()')
-    print "Expire date : " + info[5]
 else:
     print "Error."
 r = requests.get('https://who.is/whois/'+a+".co")
@@ -64,9 +61,6 @@ if text in r.text:
     print a + ".co is available. Yay!"
 elif r.status_code==200:
     print a + ".co is taken. Sorry."
-    tree = html.fromstring(r.content)
-    info = tree.xpath('//div[@class="col-md-8 queryResponseBodyValue"]/text()')
-    print "Expire date : " + info[-7]
 else:
     print "Error."
 r = requests.get('https://who.is/whois/'+a+".org")
@@ -75,9 +69,6 @@ if text in r.text:
     print a + ".org is available. Yay!"
 elif r.status_code==200:
     print a + ".org is taken. Sorry."
-    tree = html.fromstring(r.content)
-    info = tree.xpath('//div[@class="col-md-8 queryResponseBodyValue"]/text()')
-    print "Expire date : " + info[-7]
 else:
     print "Error."
 r = requests.get('https://who.is/whois/'+a+".net")
@@ -86,9 +77,6 @@ if text in r.text:
     print a + ".net is available. Yay!"
 elif r.status_code==200:
     print a + ".net is taken. Sorry."
-    tree = html.fromstring(r.content)
-    info = tree.xpath('//div[@class="col-md-8 queryResponseBodyValue"]/text()')
-    print "Expire date : " + info[-7]
 else:
     print "Error."
 r = requests.get('https://who.is/whois/'+a+".biz")
@@ -97,9 +85,6 @@ if text in r.text:
     print a + ".biz is available. Yay!"
 elif r.status_code==200:
     print a + ".biz is taken. Sorry."
-    tree = html.fromstring(r.content)
-    info = tree.xpath('//div[@class="col-md-8 queryResponseBodyValue"]/text()')
-    print "Expire date : " + info[-7]
 else:
     print "Error."
 
